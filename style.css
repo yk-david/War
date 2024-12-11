@@ -79,6 +79,12 @@ button:disabled {
 
 /* Media Query */
 @media (min-width: 768px) {
+  body {
+    width: 70%;
+    margin: 0 auto;
+    background-image: url('img/table.png');
+  }
+  
   h2 {
     margin: 2em;
     font-size: 2.5rem;
