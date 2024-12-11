@@ -9,6 +9,7 @@ const remainingText = document.getElementById("remaining");
 const computerScoreEl = document.getElementById("computer-score");
 const myScoreEl = document.getElementById("my-score");
 
+// Pick a new deck
 function handleClick() {
   fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
     .then((res) => res.json())
@@ -55,8 +56,8 @@ function determineCardWinner(card1, card2) {
     "KING",
     "ACE",
   ];
-  const card1ValueIndex = valueOptions.includes(card1.value);
-  const card2ValueIndex = valueOptions.includes(card2.value);
+  const card1ValueIndex = valueOptions.indexOf(card1.value);
+  const card2ValueIndex = valueOptions.indexOf(card2.value);
 
   if (card1ValueIndex > card2ValueIndex) {
     computerScore++;
